@@ -1,0 +1,14 @@
+      for(Edge edge : dijkstra.getPathEdges(graph.getNode(input2)))
+      {
+    	 edge.setAttribute("ui.style", "fill-color: blue; ");
+    	 for (Sprite sprite : sman.sprites())
+    	 {
+    		System.out.println("Sprite ID: " + sprite.getId() + ", Connected Edge: " + sprite.getAttribute("edgeId"));
+    		if(sprite.getLabel("edgeId").equals(edge.getId()))
+    		{
+    			//Add to string of sprites to return to UI
+    			sprite.setAttribute("ui.style", "fill-color: green;");
+    		}
+    	 }
+    	  
+      }
